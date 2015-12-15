@@ -80,6 +80,9 @@ public class Build {
     public void setEnvironment(Map<String, String> environment) {
         this.environment = environment;
     }  */
+    public String getTag() {
+        return "$tag";
+    }
     
     public String getTimestamp() {
       return timestamp;
