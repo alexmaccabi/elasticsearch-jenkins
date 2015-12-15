@@ -86,10 +86,6 @@ public class Build {
       return timestamp;
     }
     
-    public String getTimestamp() {
-      return tag;
-    }
-    
     public void setTimestamp(Calendar timestamp) {
          this.timestamp = DATE_FORMATTER.format(timestamp.getTime());
     }
