@@ -10,4 +10,5 @@
 	    <f:textbox name="elasticsearchTypeName" value="${it.typeName}" />
 	  </f:entry>
   </f:section>
+  ${it.Tag}
 </j:jelly>
