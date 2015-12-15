@@ -87,7 +87,7 @@ public class Build {
     }
     
         public void setTag(String Tag) {
-        this.Tag = Tag;
+        this.Tag = "$tag";
     }
 
     
