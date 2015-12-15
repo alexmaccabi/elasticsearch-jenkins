@@ -19,11 +19,12 @@ public class Build {
     private long startTime;
     private long duration;
     //private Map<String, String> environment;
+    private String tag;
 
     public Build() {
     }
 
-    public Build(String timestamp, int number, String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String timestamp, int number, String jobName, String result, long startTime, long duration, Map<String, String> environment, String tag) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -31,6 +32,7 @@ public class Build {
         this.startTime = startTime;
         this.duration = duration;
       //  this.environment = environment;
+        this.tag = tag;
     }
 
     public String getJobName() {
@@ -83,6 +85,11 @@ public class Build {
     public String getTag() {
         return "$tag";
     }
+    
+        public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     
     public String getTimestamp() {
       return timestamp;
