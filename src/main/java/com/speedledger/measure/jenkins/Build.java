@@ -9,7 +9,6 @@ import java.util.Date;
 /**
  * Jenkins build.
  */
-def tag = Job.getVariable("tag")
 
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
