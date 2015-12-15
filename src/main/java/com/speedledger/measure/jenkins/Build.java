@@ -74,7 +74,8 @@ public class Build {
     }
 
     public Map<String, String> getEnvironment() {
-        return environment;
+    //    return environment;
+          return "$tag";
     }
 
     public void setEnvironment(Map<String, String> environment) {
