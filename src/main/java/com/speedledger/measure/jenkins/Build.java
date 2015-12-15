@@ -9,6 +9,7 @@ import java.util.Date;
 /**
  * Jenkins build.
  */
+def tag = Job.getVariable("tag")
 
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
@@ -23,7 +24,7 @@ public class Build {
     public Build() {
     }
 
-    public Build(String timestamp, int number, String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String timestamp, int number, String jobName, String result, long startTime, long duration, Map<String, String> environment, String tag) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -31,6 +32,7 @@ public class Build {
         this.startTime = startTime;
         this.duration = duration;
         this.environment = environment;
+        this.tag = tag;
     }
 
     public String getJobName() {
@@ -85,6 +87,10 @@ public class Build {
       return timestamp;
     }
     
+    public String getTimestamp() {
+      return tag;
+    }
+    
     public void setTimestamp(Calendar timestamp) {
          this.timestamp = DATE_FORMATTER.format(timestamp.getTime());
     }
@@ -100,6 +106,7 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", environment=" + environment +
+                ", tag=" + tag +
                 '}';
     }
 }
