@@ -11,18 +11,16 @@ public class Build {
     private String result;
     private long startTime;
     private long duration;
-    private Map<String, String> environment;
 
     public Build() {
     }
 
-    public Build(int number, String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(int number, String jobName, String result, long startTime, long duration) {
         this.number = number;
         this.jobName = jobName;
         this.result = result;
         this.startTime = startTime;
         this.duration = duration;
-        this.environment = environment;
     }
 
     public String getJobName() {
@@ -65,13 +63,6 @@ public class Build {
         this.duration = duration;
     }
 
-    public Map<String, String> getEnvironment() {
-        return environment;
-    }
-
-    public void setEnvironment(Map<String, String> environment) {
-        this.environment = environment;
-    }
 
     @Override
     public String toString() {
@@ -81,7 +72,6 @@ public class Build {
                 ", result='" + result + '\'' +
                 ", startTime=" + startTime +
                 ", duration=" + duration +
-                ", environment=" + environment +
                 '}';
     }
 }
