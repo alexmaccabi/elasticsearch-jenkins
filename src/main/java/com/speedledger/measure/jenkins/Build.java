@@ -20,7 +20,6 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private String node_env;
 
     public Build() {
     }
