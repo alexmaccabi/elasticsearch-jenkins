@@ -40,6 +40,7 @@ public class Build {
 // }
 
     public void setNode_env() {
+        if (node_env == null) node_env = "kandy_production"
     this.node_env = node_env;
     }
 
