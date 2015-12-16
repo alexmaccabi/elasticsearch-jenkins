@@ -33,7 +33,7 @@ public class Build {
         this.startTime = startTime;
         this.duration = duration;
         this.environment = environment;
-        this.nodeenv = node_env;
+        this.node_env = node_env;
     }
     
 //    public String getProperty("JENKINS_BUILD_URL") {
