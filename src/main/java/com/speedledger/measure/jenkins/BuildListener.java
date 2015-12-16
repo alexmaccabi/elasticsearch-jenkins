@@ -5,7 +5,7 @@ import hudson.EnvVars;
 import hudson.Extension;
 import hudson.Plugin;
 import hudson.model.Job;
-import hudson.model.JobProperty
+import hudson.model.JobProperty;
 import hudson.model.Run;
 import hudson.model.TaskListener;
 import hudson.model.listeners.RunListener;
