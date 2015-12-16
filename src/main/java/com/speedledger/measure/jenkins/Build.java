@@ -99,7 +99,7 @@ public class Build {
                 ", result='" + result + '\'' +
                 ", startTime=" + startTime +
                 ", duration=" + duration +
-                ", environment=" + environment +
+                ", environment=" + environment + '\'' +
                 '}';
     }
 }
