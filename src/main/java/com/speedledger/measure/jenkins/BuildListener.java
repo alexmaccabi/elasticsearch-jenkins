@@ -118,11 +118,11 @@ public class BuildListener extends RunListener<Run> {
         build.setEnvironment(environment);
         build.setTimestamp(run.getTimestamp());
         try { 
-        build.setNode_env(job.getNode_env());
+        build.setNode_env(job.getNode_env().toString());
         }  catch (IOException e) {
-            LOG.log(Level.WARNING, "Error getting node_env", e);
+            LOG.log(Level.WARNING, "Error getting nodeenv", e);
         } catch (InterruptedException e) {
-            LOG.log(Level.WARNING, "Error getting node_env", e);
+            LOG.log(Level.WARNING, "Error getting nodeenv", e);
         }
 
         return build;
