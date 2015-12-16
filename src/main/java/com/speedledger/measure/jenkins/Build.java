@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import hudson.model.JobProperty;
+
 /**
  * Jenkins build.
  */
@@ -44,7 +44,7 @@ public class Build {
         return "Got NodeENV" + node_env;
     }
     
-    public void setNode_env() {
+    public void setNode_env(String node_env ) {
         if (node_env == null) node_env = "No_ENV";
     this.node_env = node_env;
     }
