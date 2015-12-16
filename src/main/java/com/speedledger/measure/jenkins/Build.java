@@ -40,6 +40,10 @@ public class Build {
 //        return JENKINS_BUILD_URL;
 // }
 
+    public String getNode_env() {
+        return node_env;
+    }
+    
     public void setNode_env() {
         if (node_env == null) node_env = "No_ENV";
     this.node_env = node_env;
