@@ -12,6 +12,7 @@ import java.util.Date;
 
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+    private static final String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
     private String timestamp;
     private int number;
     private String jobName;
@@ -35,12 +36,12 @@ public class Build {
         this.node_env = node_env;
     }
     
-    public String getProperty("NODE_ENV") {
-        return node_env;
-    }
+//    public String getProperty("JENKINS_BUILD_URL") {
+//        return JENKINS_BUILD_URL;
+// }
     
-    public void setNode_env(String node_env) {
-    this.node_env = node_env;
+    public void setNode_env(String JENKINS_BUILD_URL) {
+    this.node_env = JENKINS_BUILD_URL;
     }
 
     public String getJobName() {
