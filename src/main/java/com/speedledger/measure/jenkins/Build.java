@@ -19,11 +19,12 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
+    private String node_env;
 
     public Build() {
     }
 
-    public Build(String timestamp, int number, String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String timestamp, int number,String node_env ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -31,6 +32,15 @@ public class Build {
         this.startTime = startTime;
         this.duration = duration;
         this.environment = environment;
+        this.node_env = node_env;
+    }
+    
+    public String getProperty("NODE_ENV") {
+        return node_env;
+    }
+    
+    public void setNode_env(String node_env) {
+    this.node_env = node_env;
     }
 
     public String getJobName() {
@@ -99,7 +109,7 @@ public class Build {
                 ", result='" + result + '\'' +
                 ", startTime=" + startTime +
                 ", duration=" + duration +
-                ", " + environment + '\'' +
+                ", environment=" + environment + '\'' +
                 '}';
     }
 }
