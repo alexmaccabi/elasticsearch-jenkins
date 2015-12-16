@@ -41,7 +41,7 @@ public class Build {
 // }
 
     public void setNode_env() {
-        if (node_env == null) node_env = "kandy_production";
+        if (node_env == null) node_env = "No_ENV";
     this.node_env = node_env;
     }
 
@@ -112,6 +112,7 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", environment=" + environment + '\'' +
+                ", node_env=" + node_env + '\'' +
                 '}';
     }
 }
