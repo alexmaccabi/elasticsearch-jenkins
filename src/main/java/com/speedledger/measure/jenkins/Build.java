@@ -44,7 +44,7 @@ public class Build {
         return node_env;
     }
     
-    public void setNode_env(String node_env ) {
+    public void setNode_env(String "lol" ) {
     this.node_env = node_env;
     }
 
