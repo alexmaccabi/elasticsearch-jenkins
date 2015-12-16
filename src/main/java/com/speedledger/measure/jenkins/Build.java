@@ -14,7 +14,6 @@ public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
     private String node_env = System.getProperty("NODE_ENV");
-    	if (node_env == null) node_env = "kandy";
     private String timestamp;
     private int number;
     private String jobName;
