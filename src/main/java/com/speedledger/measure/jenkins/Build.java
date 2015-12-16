@@ -41,7 +41,7 @@ public class Build {
 // }
 
     public String getNode_env() {
-        return node_env;
+        return "Got NodeENV" + node_env;
     }
     
     public void setNode_env() {
