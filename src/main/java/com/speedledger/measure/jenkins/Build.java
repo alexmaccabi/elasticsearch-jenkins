@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import hudson.model.JobProperty;
 /**
  * Jenkins build.
  */
