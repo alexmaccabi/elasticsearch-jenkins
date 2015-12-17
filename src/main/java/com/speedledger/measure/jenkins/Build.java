@@ -98,13 +98,13 @@ public class Build {
         this.duration = duration;
     }
 
-    public Map<String, String> getEnvironment() {
+    /*public Map<String, String> getEnvironment() {
         return environment;
     }
 
     public void setEnvironment(Map<String, String> environment) {
         this.environment = environment;
-    }
+    } */
     
     public String getTimestamp() {
       return timestamp;
@@ -124,7 +124,6 @@ public class Build {
                 ", result='" + result + '\'' +
                 ", startTime=" + startTime +
                 ", duration=" + duration +
-                ", environment=" + environment + '\'' +
                 ", NODE_ENV=" + NODE_ENV + '\'' +
                 ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
