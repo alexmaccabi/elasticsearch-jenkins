@@ -12,6 +12,12 @@
     <groupId>com.speedledger.measure</groupId>
     <artifactId>elasticsearch-jenkins</artifactId>
     <version>1.0-SNAPSHOT</version>
+    	<configuration>
+		<systemPropertyVariables>
+		  <testdata.path>${basedir}/src/test/resources</testdata.path>
+		  <node.env>kandy_production</node.env>
+		</systemPropertyVariables>
+	</configuration>
     <packaging>hpi</packaging>
 	
     <dependencies>
