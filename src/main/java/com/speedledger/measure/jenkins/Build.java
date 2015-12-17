@@ -26,6 +26,7 @@ public class Build {
         return s == null || s.trim().length() == 0;
         }
     }
+    
     public Build() {
     }
 
