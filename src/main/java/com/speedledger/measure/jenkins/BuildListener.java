@@ -119,7 +119,8 @@ public class BuildListener extends RunListener<Run> {
         build.setEnvironment(environment);
         build.setTimestamp(run.getTimestamp());
         //build.setUrl(run.getUrl());
-        build.setNode_env(run.getNode_env());
+        //build.setNode_env(run.getNode_env());
+        build.setGIT(run.getGIT());
         
 /*        try { 
         //build.setNode_env(run.getNode_env());
