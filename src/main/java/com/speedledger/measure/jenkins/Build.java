@@ -22,13 +22,13 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private String GIT_COMMIT = System.getProperty("jenkins.git_commit");
+    private int GIT_COMMIT = System.getProperty("jenkins.buildUrl");
     
     public Build() {
     }
 
 
-    public Build(String GIT_COMMIT ,String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String GIT_COMMIT ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -53,7 +53,7 @@ public class Build {
     this.NODE_ENV = NODE_ENV;
     }
 */
-    public String getGIT() {
+    public String getGIT("GIT_COMMIT") {
         return GIT_COMMIT;
     }
 
