@@ -46,14 +46,6 @@ public class Build {
     public void setNode_env(String NODE_ENV ) {
     this.NODE_ENV = NODE_ENV;
     }
-
-    public int getGIT() {
-        return GIT_COMMIT;
-    }
-
-    public void setGIT(String GIT_COMMIT) {
-        this.GIT_COMMIT = GIT_COMMIT;
-    }
     
     public String getJobName() {
         return jobName;
