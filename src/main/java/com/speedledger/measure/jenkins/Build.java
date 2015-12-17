@@ -21,11 +21,11 @@ public class Build {
     private String result;
     private long startTime;
     private long duration;
-    private Map<String, String> environment;
-    }
+    //private Map<String, String> environment;
     
     public Build() {
     }
+
 
     public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
