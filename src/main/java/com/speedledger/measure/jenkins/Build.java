@@ -14,6 +14,7 @@ public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
    // private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
+    private String NODE_ENV = System.getProperty("NODE_ENV");
     private String timestamp;
     private int number;
     private String jobName;
@@ -21,20 +22,6 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private static boolean isEmpty(string s) {
-        return s == null || s.trim().length() == 0;
-    }
-    private static String getNode_env() { 
-        String NODE_ENV = System.getProperty("NODE_ENV");
-        if (!isEmpty(NODE_ENV)) {
-            LOG.config("Using NODE_ENV" + NODE_ENV);
-            return NODE_ENV;
-        }
-        else {
-            LOG.config("NO NODE_ENV");
-            return null;
-        }
-    }
     
     public Build() {
     }
