@@ -43,7 +43,7 @@ public class Build {
 // }
 
     public String getNode_env() {
-        Sytem.out.println(NODE_ENV)
+        Sytem.out.println(NODE_ENV);
         return NODE_ENV;
     }
     
