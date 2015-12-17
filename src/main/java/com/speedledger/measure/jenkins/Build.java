@@ -35,7 +35,7 @@ public class Build {
         this.duration = duration;
         this.environment = environment;
         this.node_env = node_env;
-        this JENKINS_BUILD_URL = JENKINS_BUILD_URL
+        this JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
     
 //    public String getProperty("JENKINS_BUILD_URL") {
