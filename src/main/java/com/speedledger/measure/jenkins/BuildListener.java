@@ -1,5 +1,5 @@
 package com.speedledger.measure.jenkins;
-
+import static java.lang.System.out;
 import com.google.common.collect.Sets;
 import hudson.EnvVars;
 import hudson.Extension;
