@@ -22,38 +22,6 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    public List<BuildParameter> getAvailableParameters() {
-        List<BuildParameter> buildParameters = new ArrayList<BuildParameter>();
-
-        for (ParameterDefinition parameterDefinition : getParameterDefinitions()) {
-            BuildParameter buildParameter = new BuildParameter(parameterDefinition.getName(), parameterDefinition.getDescription());
-            if (parameterDefinition.getClass().isAssignableFrom(PasswordParameterDefinition.class)) {
-                buildParameter.setType(BuildParameterType.PASSWORD);
-            } else if (parameterDefinition.getClass().isAssignableFrom(BooleanParameterDefinition.class)) {
-                buildParameter.setType(BuildParameterType.BOOLEAN);
-            } else if (parameterDefinition.getClass().isAssignableFrom(ChoiceParameterDefinition.class)) {
-                buildParameter.setType(BuildParameterType.CHOICE);
-                buildParameter.setChoices(((ChoiceParameterDefinition) parameterDefinition).getChoices());
-            } else if (parameterDefinition.getClass().isAssignableFrom(StringParameterDefinition.class)) {
-                buildParameter.setType(BuildParameterType.STRING);
-            } else if (parameterDefinition.getClass().isAssignableFrom(TextParameterDefinition.class)) {
-                buildParameter.setType(BuildParameterType.TEXT);
-            } else {
-                // default to string
-                buildParameter.setType(BuildParameterType.STRING);
-            }
-
-            try {
-                buildParameter.setValue(getParameterDefinitionValue(parameterDefinition));
-            } catch (IllegalArgumentException ignored) {
-                // If a value was provided that does not match available options, leave the value blank.
-            }
-
-            buildParameters.add(buildParameter);
-        }
-
-        return buildParameters;
-    }
     
     public Build() {
     }
