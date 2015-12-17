@@ -14,7 +14,7 @@ public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
     private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
-    private String node_env = System.getProperty("NODE_ENV");
+    private String NODE_ENV = System.getProperty("NODE_ENV");
     private String timestamp;
     private int number;
     private String jobName;
