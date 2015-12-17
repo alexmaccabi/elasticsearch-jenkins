@@ -27,11 +27,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static java.lang.System.err;
-import static java.lang.System.out;
-
-import java.io.IOException;
-import java.io.PrintStream;
 
 
 /**
@@ -125,7 +120,6 @@ public class BuildListener extends RunListener<Run> {
         build.setTimestamp(run.getTimestamp());
         //build.setUrl(run.getUrl());
         build.setNode_env(job.getNode_env);
-            if (NODE_ENV == null) NODE_ENV = "Not_Set";
         
 /*        try { 
         //build.setNode_env(run.getNode_env());
