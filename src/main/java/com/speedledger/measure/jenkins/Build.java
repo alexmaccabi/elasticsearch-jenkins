@@ -53,11 +53,11 @@ public class Build {
     this.NODE_ENV = NODE_ENV;
     }
 */
-    public String getGIT("GIT_COMMIT") {
+    public int getGIT() {
         return GIT_COMMIT;
     }
 
-    public void setGIT(String GIT_COMMIT) {
+    public void setGIT(int GIT_COMMIT) {
         this.GIT_COMMIT = GIT_COMMIT;
     }
     
