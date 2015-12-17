@@ -21,20 +21,20 @@ public class Build {
     private String result;
     private long startTime;
     private long duration;
-    private Map<String, String> environment;
+    //private Map<String, String> environment;
 
     public Build() {
     }
 
-    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String node_env ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
         this.result = result;
         this.startTime = startTime;
         this.duration = duration;
-        this.environment = environment;
-        this.node_env = node_env;
+        //this.environment = environment;
+        this.NODE_ENV = NODE_ENV;
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
     
@@ -43,11 +43,11 @@ public class Build {
 // }
 
     public String getNode_env() {
-        return node_env;
+        return NODE_ENV;
     }
     
-    public void setNode_env(String node_env ) {
-    this.node_env = node_env;
+    public void setNode_env(String NODE_ENV ) {
+    this.NODE_ENV = NODE_ENV;
     }
 
     public String getJobName() {
@@ -125,7 +125,7 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", environment=" + environment + '\'' +
-                ", node_env=" + node_env + '\'' +
+                ", NODE_ENV=" + NODE_ENV + '\'' +
                 ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
