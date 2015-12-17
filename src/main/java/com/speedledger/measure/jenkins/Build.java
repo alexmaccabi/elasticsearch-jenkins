@@ -14,7 +14,7 @@ public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
     private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
-    private String NODE_ENV = System.getProperty("NODE_ENV");
+    private String GIT_COMMIT = System.getProperty("jenkins.gitcommit");
     private String timestamp;
     private int number;
     private String jobName;
@@ -27,7 +27,7 @@ public class Build {
     }
 
 
-    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String GIT_COMMIT ,String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -37,6 +37,7 @@ public class Build {
         this.environment = environment;
         this.NODE_ENV = NODE_ENV;
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
+        this.GIT_COMMIT = GIT_COMMIT;
     }
 
     public String getNode_env() {
@@ -78,7 +79,15 @@ public class Build {
     public void setUrl(String JENKINS_BUILD_URL) {
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     } 
+    
+    public String getGIT() {
+        return GIT_COMMIT;
+    }
 
+    public void setGIT(String GIT_COMMIT) {
+        this.GIT_COMMIT = GIT_COMMIT;
+    } 
+    
     public long getStartTime() {
         return startTime;
     }
@@ -122,6 +131,7 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", NODE_ENV=" + NODE_ENV + '\'' +
+                ", GIT_COMMIT=" + GIT_COMMIT + '\'' +
                 ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
