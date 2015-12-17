@@ -35,18 +35,18 @@ public class Build {
         this.startTime = startTime;
         this.duration = duration;
         this.environment = environment;
-        this.NODE_ENV = NODE_ENV;
+        //this.NODE_ENV = NODE_ENV;
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
         this.GIT_COMMIT = GIT_COMMIT;
     }
-
-    public String getNode_env() {
-        return NODE_ENV;
-    }
+/*
+      public String getNode_env() {
+          return NODE_ENV;
+      }
     
-    public void setNode_env(String NODE_ENV ) {
-    this.NODE_ENV = NODE_ENV;
-    }
+      public void setNode_env(String NODE_ENV ) {
+      this.NODE_ENV = NODE_ENV;
+      } */
     
     public String getJobName() {
         return jobName;
@@ -130,7 +130,7 @@ public class Build {
                 ", result='" + result + '\'' +
                 ", startTime=" + startTime +
                 ", duration=" + duration +
-                ", NODE_ENV=" + NODE_ENV + '\'' +
+                //", NODE_ENV=" + NODE_ENV + '\'' +
                 ", GIT_COMMIT=" + GIT_COMMIT + '\'' +
                 ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
