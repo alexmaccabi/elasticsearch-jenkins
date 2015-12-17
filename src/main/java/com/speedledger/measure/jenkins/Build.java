@@ -6,13 +6,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static java.lang.System.err;
-import static java.lang.System.out;
-
-import java.io.IOException;
-import java.io.PrintStream;
-
-
 /**
  * Jenkins build.
  */
