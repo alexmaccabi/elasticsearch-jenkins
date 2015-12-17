@@ -22,12 +22,13 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
+    private String GIT_COMMIT = System.getProperty("GIT_COMMIT");
     
     public Build() {
     }
 
 
-    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String GIT_COMMIT ,String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -36,6 +37,7 @@ public class Build {
         this.duration = duration;
         this.environment = environment;
         this.NODE_ENV = NODE_ENV;
+        this.GIT_COMMIT = GIT_COMMIT;
         //this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
 
@@ -43,14 +45,22 @@ public class Build {
 //        return JENKINS_BUILD_URL;
 // }
 
-    public String getNode_env() {
-        return NODE_ENV;
+/*    public String getNode_env() {
+//        return NODE_ENV;
     }
     
     public void setNode_env(String NODE_ENV ) {
     this.NODE_ENV = NODE_ENV;
     }
+*/
+    public String getGIT() {
+        return GIT_COMMIT;
+    }
 
+    public void setGIT(String GIT_COMMIT) {
+        this.GIT_COMMIT = GIT_COMMIT;
+    }
+    
     public String getJobName() {
         return jobName;
     }
@@ -126,6 +136,7 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", NODE_ENV=" + NODE_ENV + '\'' +
+                ", GIT_COMMIT=" + GIT_COMMIT + '\'' +
                // ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
