@@ -39,14 +39,14 @@ public class Build {
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
         this.GIT_COMMIT = GIT_COMMIT;
     }
-/*
+
       public String getNode_env() {
-          return NODE_ENV;
+          return node_env ;
       }
     
-      public void setNode_env(String NODE_ENV ) {
-      this.NODE_ENV = NODE_ENV;
-      } */
+      public void setNode_env(String node_env) {
+      this.node_env  = node_env ;
+      }
     
     public String getJobName() {
         return jobName;
