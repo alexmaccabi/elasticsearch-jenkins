@@ -22,9 +22,6 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private static boolean isEmpty(String s) {
-        return s == null || s.trim().length() == 0;
-        }
     }
     
     public Build() {
@@ -47,15 +44,7 @@ public class Build {
 // }
 
     public String getNode_env() {
-        String NODE_ENV = System.getProperty("NODE_ENV");
-        if (!isEmpty(NODE_ENV)) { 
-            LOG.config("Using node_env: " + NODE_ENV);
-            return NODE_ENV;
-        }
-        else {
-            LOG.config("NO NODE ENV");
-            return null;
-        }
+        return NODE_ENV;
     }
     
     public void setNode_env(String NODE_ENV ) {
