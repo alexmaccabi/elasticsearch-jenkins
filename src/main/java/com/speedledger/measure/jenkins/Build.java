@@ -13,6 +13,7 @@ import java.util.Date;
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
+    private static final String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
     private String node_env = System.getProperty("NODE_ENV");
     private String timestamp;
     private int number;
@@ -25,7 +26,7 @@ public class Build {
     public Build() {
     }
 
-    public Build(String timestamp, int number,String node_env ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String node_env ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -34,6 +35,7 @@ public class Build {
         this.duration = duration;
         this.environment = environment;
         this.node_env = node_env;
+        this JENKINS_BUILD_URL = JENKINS_BUILD_URL
     }
     
 //    public String getProperty("JENKINS_BUILD_URL") {
@@ -70,6 +72,14 @@ public class Build {
 
     public void setResult(String result) {
         this.result = result;
+    }
+    
+    public String getUrl() {
+        return JENKINS_BUILD_URL;
+    }
+
+    public void setUrl(String JENKINS_BUILD_URL) {
+        this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
 
     public long getStartTime() {
@@ -116,6 +126,7 @@ public class Build {
                 ", duration=" + duration +
                 ", environment=" + environment + '\'' +
                 ", node_env=" + node_env + '\'' +
+                ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
 }
