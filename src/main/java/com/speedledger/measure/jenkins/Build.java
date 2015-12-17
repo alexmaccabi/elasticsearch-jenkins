@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
-    //private static final String node_env = System.getProperty("NODE_ENV");
+    private String node_env = System.getProperty("NODE_ENV");
     private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
     private String GIT_COMMIT = System.getProperty("jenkins.gitcommit");
     private String timestamp;
