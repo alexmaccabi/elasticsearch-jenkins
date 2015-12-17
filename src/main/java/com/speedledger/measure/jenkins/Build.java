@@ -122,7 +122,6 @@ public class Build {
                 ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", NODE_ENV=" + NODE_ENV + '\'' +
-                ", GIT_COMMIT=" + GIT_COMMIT + '\'' +
                 ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
