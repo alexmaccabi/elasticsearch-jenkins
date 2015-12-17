@@ -21,7 +21,7 @@ public class Build {
     private String result;
     private long startTime;
     private long duration;
-    //private Map<String, String> environment;
+    private Map<String, String> environment;
     
     public Build() {
     }
