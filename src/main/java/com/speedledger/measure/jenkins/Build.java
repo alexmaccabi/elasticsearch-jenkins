@@ -15,6 +15,7 @@ public class Build {
     //private static final String node_env = System.getProperty("NODE_ENV");
     private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
     private String NODE_ENV = System.getProperty("NODE_ENV");
+        if (NODE_ENV == null) NODE_ENV = "Not_Set";
     private String timestamp;
     private int number;
     private String jobName;
