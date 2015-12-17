@@ -21,7 +21,7 @@ public class Build {
     private String result;
     private long startTime;
     private long duration;
-    //private Map<String, String> environment;
+    private Map<String, String> environment;
 
     public Build() {
     }
@@ -33,7 +33,7 @@ public class Build {
         this.result = result;
         this.startTime = startTime;
         this.duration = duration;
-        //this.environment = environment;
+        this.environment = environment;
         this.NODE_ENV = NODE_ENV;
         //this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
@@ -98,13 +98,13 @@ public class Build {
         this.duration = duration;
     }
 
-    /*public Map<String, String> getEnvironment() {
+    public Map<String, String> getEnvironment() {
         return environment;
     }
 
     public void setEnvironment(Map<String, String> environment) {
         this.environment = environment;
-    } */
+    } 
     
     public String getTimestamp() {
       return timestamp;
