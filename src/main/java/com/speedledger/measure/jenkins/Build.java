@@ -14,7 +14,7 @@ public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
    // private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
-    private String NODE_ENV = System.getProperty("NODE_ENV", "kandy_prp");
+    private String NODE_ENV = System.getProperty("NODE_ENV");
     private String timestamp;
     private int number;
     private String jobName;
@@ -22,7 +22,10 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-
+    private static boolean isEmpty(String s) {
+        return s == null || s.trim().length() == 0;
+        }
+    }
     public Build() {
     }
 
@@ -37,13 +40,21 @@ public class Build {
         this.NODE_ENV = NODE_ENV;
         //this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
-    
+
 //    public String getProperty("JENKINS_BUILD_URL") {
 //        return JENKINS_BUILD_URL;
 // }
 
     public String getNode_env() {
-        return NODE_ENV;
+        String NODE_ENV = System.getProperty("NODE_ENV");
+        if (!isEmpty(NODE_ENV)) { 
+            LOG.config("Using node_env: " + NODE_ENV);
+            return NODE_ENV;
+        }
+        else {
+            LOG.config("NO NODE ENV");
+            return null;
+        }
     }
     
     public void setNode_env(String NODE_ENV ) {
