@@ -13,7 +13,7 @@ import java.util.Date;
 public class Build {
     public transient static final DateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
     //private static final String node_env = System.getProperty("NODE_ENV");
-   // private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
+    private String JENKINS_BUILD_URL = System.getProperty("jenkins.buildUrl");
     private String NODE_ENV = System.getProperty("NODE_ENV");
     private String timestamp;
     private int number;
@@ -22,13 +22,12 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private String GIT_COMMIT = System.getProperty("jenkins.buildUrl");
     
     public Build() {
     }
 
 
-    public Build(String GIT_COMMIT ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(String JENKINS_BUILD_URL ,String timestamp, int number,String NODE_ENV ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
@@ -37,22 +36,17 @@ public class Build {
         this.duration = duration;
         this.environment = environment;
         this.NODE_ENV = NODE_ENV;
-        this.GIT_COMMIT = GIT_COMMIT;
-        //this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
+        this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
     }
 
-//    public String getProperty("JENKINS_BUILD_URL") {
-//        return JENKINS_BUILD_URL;
-// }
-
-/*    public String getNode_env() {
-//        return NODE_ENV;
+    public String getNode_env() {
+        return NODE_ENV;
     }
     
     public void setNode_env(String NODE_ENV ) {
     this.NODE_ENV = NODE_ENV;
     }
-*/
+
     public int getGIT() {
         return GIT_COMMIT;
     }
@@ -85,13 +79,13 @@ public class Build {
         this.result = result;
     }
     
-/*    public String getUrl() {
+    public String getUrl() {
         return JENKINS_BUILD_URL;
     }
 
     public void setUrl(String JENKINS_BUILD_URL) {
         this.JENKINS_BUILD_URL = JENKINS_BUILD_URL;
-    } */
+    } 
 
     public long getStartTime() {
         return startTime;
@@ -137,7 +131,7 @@ public class Build {
                 ", duration=" + duration +
                 ", NODE_ENV=" + NODE_ENV + '\'' +
                 ", GIT_COMMIT=" + GIT_COMMIT + '\'' +
-               // ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
+                ", JENKINS_BUILD_URL=" + JENKINS_BUILD_URL + '\'' +
                 '}';
     }
 }
