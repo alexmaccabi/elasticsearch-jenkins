@@ -22,7 +22,7 @@ public class Build {
     private long startTime;
     private long duration;
     private Map<String, String> environment;
-    private int GIT_COMMIT = System.getProperty("jenkins.buildUrl");
+    private String GIT_COMMIT = System.getProperty("jenkins.buildUrl");
     
     public Build() {
     }
@@ -57,7 +57,7 @@ public class Build {
         return GIT_COMMIT;
     }
 
-    public void setGIT(int GIT_COMMIT) {
+    public void setGIT(String GIT_COMMIT) {
         this.GIT_COMMIT = GIT_COMMIT;
     }
     
