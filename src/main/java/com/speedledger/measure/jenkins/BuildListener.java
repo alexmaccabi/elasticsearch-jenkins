@@ -27,6 +27,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static java.lang.System.err;
+import static java.lang.System.out;
+
+import java.io.IOException;
+import java.io.PrintStream;
+
 
 /**
  * Send Jenkins build information to Elasticsearch.
