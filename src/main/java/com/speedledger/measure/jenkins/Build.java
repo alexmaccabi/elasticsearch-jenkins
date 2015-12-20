@@ -28,7 +28,7 @@ public class Build {
     }
 
 
-    public Build(Map <String, String> node_env ,String timestamp, int number,String node_env ,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
+    public Build(Map <String, String> node_env ,String timestamp, int number,String jobName, String result, long startTime, long duration, Map<String, String> environment) {
         this.timestamp = timestamp;
         this.number = number;
         this.jobName = jobName;
