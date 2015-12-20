@@ -41,7 +41,7 @@ public class Build {
         //this.GIT_COMMIT = GIT_COMMIT;
     }
 
-    public Map<String, String> getNodeEnv {
+    public Map<String, String> getNodeEnv() {
         return node_env.get("NODE_ENV");
     }
 
