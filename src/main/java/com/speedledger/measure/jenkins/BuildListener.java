@@ -104,6 +104,7 @@ public class BuildListener extends RunListener<Run> {
         EnvVars environment = null;
         try {
             environment = run.getEnvironment(listener);
+            node_env = run.getNodeEnv(listener)
         } catch (IOException e) {
             LOG.log(Level.WARNING, "Error getting environment", e);
         } catch (InterruptedException e) {
@@ -118,8 +119,6 @@ public class BuildListener extends RunListener<Run> {
         build.setNumber(run.getNumber());
         //build.setEnvironment(environment);
         build.setTimestamp(run.getTimestamp());
-        build.setUrl(run.getUrl());
-        //build.setGIT(run.getGIT());
         build.setNodeEnv(run.getNodeEnv());
 
         
